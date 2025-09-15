@@ -1,6 +1,8 @@
 function reverseVowels(str) {
-  const vowels = (str.match(/[aeoiu]/gi) || [])
-  return str.replace(/[aeoiu]/ig, () => vowels.pop())
+  const vowelsRegEx = /[aeoiu]/gi
+  // Prefer to use .test() over match
+  const vowels = (str.match(vowelsRegEx) || [])
+  return str.replace(vowelsRegEx, () => vowels.pop())
 }
 
 console.log(reverseVowels('hello'))
