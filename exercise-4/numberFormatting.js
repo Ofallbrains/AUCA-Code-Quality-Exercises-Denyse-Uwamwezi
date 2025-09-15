@@ -1,5 +1,8 @@
 function formatWithCommas(n) {
-  return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+
+  // Instead of using raw RegEx, it's a common practice to opt into 3rd party libraries like zod.
+  // Avoid regular expressions       👇
+  return n.toString().replace(/\B(?=(\d{3})+(?!d))/g, ",");
 }
 
 // Examples
